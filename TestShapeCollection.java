@@ -4,20 +4,45 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestShapeCollection {
     @Test
     public void testEmptyCollection() {
-        // TODO: Skriv klart tester för en tom ShapeCollection.
-        // Ta bort raden nedan innan du börjar.
-        // Kom ihåg Given, When, Then och se till att
-        // ALLA metoder i ShapeCollection täcks av dina tester.
-        assertTrue(false);
+        // Creates Collection ( Empty )
+        ShapeCollection collection = new ShapeCollection();
+
+        boolean isAllCircles = collection.isAllCircles(); // Should be true
+        assertTrue(isAllCircles, "isAllCircles should be -> true");
     }
 
     @Test
     public void testSingleRectangle() {
-        // TODO: Skriv klart tester för en ShapeCollection med en rektangel.
-        // Ta bort raden nedan innan du börjar.
-        assertTrue(false);
+        ShapeCollection collection = new ShapeCollection();
+
+        // Adds Shapes
+        collection.addShape(new Rectangle(10, 10));
+
+
+        assertFalse(collection.isAllCircles(), "isAllCircles should be -> false");
     }
 
-    // TODO: Vilka fler tester behövs?
-    // Lägg till minst två metoder som testar vanliga situationer med ShapeCollection.
+    @Test
+    public void testMultipleShapes() {
+        ShapeCollection collection = new ShapeCollection();
+
+        // Shapes
+        collection.addShape(new Rectangle(5, 5));
+        collection.addShape(new Square(5));
+        collection.addShape(new Circle(5));
+        collection.addShape(new Circle(5));
+        assertFalse(collection.isAllCircles(), "isAllCircles should be -> false");
+    }
+
+    @Test
+    public void testMultipleCircles() {
+        ShapeCollection collection = new ShapeCollection();
+
+        // Circles
+        collection.addShape(new Circle(5));
+        collection.addShape(new Circle(5));
+        collection.addShape(new Circle(5));
+        collection.addShape(new Circle(5));
+        assertTrue(collection.isAllCircles(), "isAllCircles should be -> true");
+    }
 }
