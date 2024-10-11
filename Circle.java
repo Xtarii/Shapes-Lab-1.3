@@ -1,7 +1,7 @@
 public class Circle implements Shape2D {
     private double radius;
 
-    public Circle(double radius) throws Exception {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
