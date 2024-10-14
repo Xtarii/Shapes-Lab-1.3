@@ -4,17 +4,21 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestSquare {
     @Test
     public void testSomeSquare() {
-        // TODO: Skriv klart tester för en fyrkant.
-        // Ta bort raden nedan innan du börjar.
-        // Kom ihåg Given, When, Then och se till att
-        // ALLA metoder i Square täcks av dina tester.
-        assertTrue(false);
+        // kollar om arean funkar
+        Square rect = new Square(5);
+
+       double area = rect.getArea();
+        assertEquals(25, area,"Incorrect area");
     }
 
     @Test
     public void testSomeOtherSquare() {
-        // TODO: Skriv klart tester för en annan fyrkant.
-        // Ta bort raden nedan innan du börjar.
-        assertTrue(false);
+        // Kollar så att arean funkar även om de är float värde
+        Square rect = new Square(10.1);
+
+        double area = rect.getArea();
+        assertEquals(102.00999999999999, area,"Incorrect area");
+
+
     }
 }
