@@ -17,8 +17,7 @@ public class Triangle implements Shape2D {
 
     @Override
     public double getArea() {
-        // TODO: Skriv klart den här funktionen.
-        
-        return 0.0;
+        // Triangle area is width * height / 2
+        return (base * height) / 2;
     }
 }

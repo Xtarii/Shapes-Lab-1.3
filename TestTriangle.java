@@ -4,17 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestTriangle {
     @Test
     public void testSomeTriangle() {
-        // TODO: Skriv klart tester för en triangel.
-        // Ta bort raden nedan innan du börjar.
-        // Kom ihåg Given, When, Then och se till att
-        // ALLA metoder i Triangle täcks av dina tester.
-        assertTrue(false);
+        Triangle triangle = new Triangle(5, 5);
+        double area = triangle.getArea(); // Should be (5 * 5) / 2 = 12.5
+        assertEquals(12.5, area, "Area should be 12.5");
     }
 
     @Test
     public void testSomeOtherTriangle() {
-        // TODO: Skriv klart tester för en annan triangel.
-        // Ta bort raden nedan innan du börjar.
-        assertTrue(false);
+        Triangle triangle = new Triangle(12, 45);
+        double area = triangle.getArea(); // (12 * 45) / 2
+        assertEquals((double) (12 * 45) / 2, area, "Area should be 270");
     }
 }
