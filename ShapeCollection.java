@@ -12,9 +12,13 @@ public class ShapeCollection {
         return shapes.size();
     }
 
-    public double getTotalArea() {
-        // TODO: Skriv klart den här funktionen.
-        return 0.0;
+    public double getTotalArea() { // skapar en variable som förvarar de olika areorna
+        // som sedan loopar över varje form i listan och callar på getArea över varje form och lägger till de i totalen och sedan returnerar totalen
+        double totalArea = 0.0;
+        for (Shape2D shape : shapes) {
+            totalArea += shape.getArea();
+        }
+        return totalArea;
     }
 
     /**
